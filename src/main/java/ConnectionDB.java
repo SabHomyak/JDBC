@@ -52,8 +52,8 @@ public class ConnectionDB {
         }
         try (FileWriter fw = new FileWriter(file)) {
             fw.write("db.url=jdbc:mysql://localhost:3306/?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC" + System.lineSeparator());
-            fw.write("db.user=root"+ System.lineSeparator());
-            fw.write("db.password=root"+ System.lineSeparator());
+            fw.write("db.user=root" + System.lineSeparator());
+            fw.write("db.password=root" + System.lineSeparator());
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -72,7 +72,7 @@ public class ConnectionDB {
         url = properties.getProperty("db.url");
         user = properties.getProperty("db.user");
         password = properties.getProperty("db.password");
-        connection = DriverManager.getConnection(url,user,password);
+        connection = DriverManager.getConnection(url, user, password);
         return connection;
     }
 }
